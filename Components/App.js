@@ -5,7 +5,7 @@ const siteTitle = 'David Craig - Developer'
 const navItems = [
   { url: '/', name: 'About' },
   { url: '/cv', name: 'CV' },
-  { url: '/blog', name: 'Blog' }
+  // { url: '/blog', name: 'Blog' }
 ]
 
 function Navigation() {
