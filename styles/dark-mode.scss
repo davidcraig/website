@@ -2,13 +2,15 @@
   html {
     --bg: #161616;
     --bg-2: #131313;
+    --bg-3: #222;
+    --heading: #00aeff;
     --text: #ececec;
     background-color: var(--bg);
   }
 
   *, .media-content strong { color: var(--text); }
 
-  .card-header-title, .content .h5 { color: #00ff73; }
+  .card-header-title, .content .h5 { color:var(--heading); }
 
   .card, .media {
     background-color: var(--bg-2);
@@ -20,5 +22,25 @@
   .table {
     background-color: transparent;
     color: var(--text);
+  }
+
+  .tag:not(body) {
+    background-color: var(--bg);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: #acacac;
+  }
+
+  .menu-list a {
+    color: var(--text);
+
+    &:hover {
+      background: transparent;
+      color: var(--heading);
+    }
+  }
+
+  .content table td, .content table th {
+    border-color: var(--bg-3);
   }
 }
