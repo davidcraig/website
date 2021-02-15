@@ -1,0 +1,28 @@
+@import '~bulma';
+
+html {
+  overflow: hidden;
+}
+
+:root {
+  --sidebar-width: 180px;
+  --margin-top: 20px;
+}
+
+#site {
+  display: flex;
+}
+
+aside {
+  width: var(--sidebar-width);
+  margin-top: var(--margin-top);
+}
+
+.brand {
+  padding-left: 8px;
+}
+
+main {
+  width: calc(100vw - var(--sidebar-width));
+  margin-top: var(--margin-top);
+}
