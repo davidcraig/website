@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import App from '../Components/App'
+import ExternalLink from '../Components/ExternalLink'
 import { Columns, Column, Card } from '@davidcraig/react-bulma'
 import { WebSite } from '@davidcraig/react-schema'
 import { PersonJson } from '@davidcraig/react-schema/dist/Person/Person'
@@ -75,8 +76,18 @@ export default function Home() {
             <Card title='Development Profiles'>
               <table className='table is-narrow'>
                 <tbody>
-                  <tr><td>Github</td><td><a href='https://github.com/davidcraig'>davidcraig</a></td></tr>
-                  <tr><td>NPM</td><td><a href='https://www.npmjs.com/~davidcraig'>@davidcraig</a></td></tr>
+                  <tr>
+                    <td>Github</td>
+                    <td>
+                      {ExternalLink('https://github.com/davidcraig', 'davidcraig')}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>NPM</td>
+                    <td>
+                      {ExternalLink('https://www.npmjs.com/~davidcraig', '@davidcraig')}
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </Card>
