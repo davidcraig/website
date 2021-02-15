@@ -4,9 +4,14 @@ import { Columns, Column, Card } from '@davidcraig/react-bulma'
 import { WebSite } from '@davidcraig/react-schema'
 import { PersonJson } from '@davidcraig/react-schema/dist/Person/Person'
 
-function tag(text) {
+function tag(text, type = null) {
+  const classes = ['tag']
+  if (type) {
+    classes.push(type)
+  }
+
   return (
-    <span class="tag">
+    <span className={classes.join(' ')}>
       {text}
     </span>
   )
@@ -77,10 +82,8 @@ export default function Home() {
             </Card>
           </Column>
           <Column>
-            
           </Column>
         </Columns>
-        
       </App>
 
       <WebSite

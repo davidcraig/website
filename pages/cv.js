@@ -91,7 +91,7 @@ export default function CV() {
             </section>
 
             <section>
-              <h5>Work History</h5>
+              <h5 className='h5'>Work History</h5>
 
               <table>
                 <tbody>

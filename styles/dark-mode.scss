@@ -1,0 +1,24 @@
+@media (prefers-color-scheme: dark) {
+  html {
+    --bg: #161616;
+    --bg-2: #131313;
+    --text: #ececec;
+    background-color: var(--bg);
+  }
+
+  *, .media-content strong { color: var(--text); }
+
+  .card-header-title, .content .h5 { color: #00ff73; }
+
+  .card, .media {
+    background-color: var(--bg-2);
+    color: var(--text);
+    border: 1px solid #121212;
+    box-shadow: 4px 4px 4px #181818;
+  }
+
+  .table {
+    background-color: transparent;
+    color: var(--text);
+  }
+}
