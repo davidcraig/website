@@ -17,7 +17,7 @@ const BlogArticle = (props) => {
           <title>David Craig - {props.title}</title>
         </Head>
         <App>
-          <h1>{props.title}</h1>
+          <h1 className='h1'>{props.title}</h1>
           {props.children}
         </App>
       </article>

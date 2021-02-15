@@ -10,7 +10,7 @@ const IndexPage = () => {
       datetime='2011-02-06'
       date='6 Feb 2011'
     >
-      <h2>Installation</h2>
+      <h2 className='h2'>Installation</h2>
       <p>First of all, simply run the Ruby installer from the website, then download the ruby gems setup, extract all of the files, and run setup.rb - this installs gems.</p>
 
       <p>I would strongly recommend rebooting at this point.</p>
@@ -42,7 +42,7 @@ const IndexPage = () => {
       <p>so to access our server we simply type in <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">http://localhost:3000</a></p>
       <p>and you should see your ruby on rails enviroment all ready to use! (you need to keep that console open unless you install the mongrel service)</p>
 
-      <h2>To run mongrel as a service</h2>
+      <h2 className='h2'>To run mongrel as a service</h2>
 
       <p><Code type='terminal'>gem install mongrel_service</Code></p>
       <p>then :</p>
