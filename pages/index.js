@@ -4,6 +4,7 @@ import ExternalLink from '../Components/ExternalLink'
 import { Columns, Column, Card } from '@davidcraig/react-bulma'
 import { WebSite } from '@davidcraig/react-schema'
 import { PersonJson } from '@davidcraig/react-schema/dist/Person/Person'
+import { urlObjectKeys } from 'next/dist/next-server/lib/utils'
 
 function tag(text, type = null) {
   const classes = ['tag']
@@ -20,10 +21,9 @@ function tag(text, type = null) {
 
 function dcraigMedia() {
   return (
-    <article class="media">
+    <article class="media dcraig-intro-media">
       <figure class="media-left">
-        <p class="image is-64x64">
-          <img src="/images/me.png" />
+        <p class="image is-128x160" style={{ backgroundImage: 'url(/images/me.png)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom center' }}>
         </p>
       </figure>
       <div class="media-content">
