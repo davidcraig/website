@@ -34,7 +34,9 @@ export default function App (props) {
       <Navigation />
       <main>
         <div className='container'>
-          {props.children}
+          <div className='content'>
+            {props.children}
+          </div>
         </div>
       </main>
     </div>
