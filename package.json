@@ -8,12 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "bulma": "^0.9.2",
     "next": "10.0.6",
     "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "tailwindcss": "^2.0.3"
+    "react-dom": "17.0.1"
   },
   "devDependencies": {
-    "@davidcraig/react-schema": "^1.0.9"
+    "@davidcraig/react": "^1.0.2",
+    "@davidcraig/react-bulma": "^1.0.14",
+    "@davidcraig/react-schema": "^1.0.9",
+    "sass": "^1.32.7",
+    "scss": "^0.2.4"
   }
 }
