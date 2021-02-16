@@ -20,7 +20,7 @@ function Navigation() {
         {
           navItems.map(nav => {
             return <li>
-              <Link href={nav.url}>{nav.name}</Link>
+              <Link key={nav.name} href={nav.url}>{nav.name}</Link>
             </li>
           })
         }
