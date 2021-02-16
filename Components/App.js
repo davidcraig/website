@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const siteTitle = 'David Craig - Developer'
 
@@ -19,7 +20,7 @@ function Navigation() {
         {
           navItems.map(nav => {
             return <li>
-              <a href={nav.url}>{nav.name}</a>
+              <Link href={nav.url}>{nav.name}</Link>
             </li>
           })
         }
