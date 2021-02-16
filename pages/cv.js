@@ -31,7 +31,7 @@ const history = [
     jobTitle: 'Developer',
     from: '18 October 2017',
     to: 'December 2018',
-    description: 'Development and maintenance of systems in WordPress and Laravel, working closely with the technical lead to make decisions relating to architecture and devops/build pipeline. I am also responsible for maintaining the build process and ensuring code builds successfully and is then deployed to production.  As part of this role I have also had part responsibility for coaching the developer apprentice on the team.'
+    description: 'Development and maintenance of systems in WordPress and Laravel, working closely with the technical lead to make decisions relating to architecture and devops/build pipeline. I was also responsible for maintaining the build process and ensuring code builds successfully and is then deployed to production.  As part of this role I have also had part responsibility for coaching the developer apprentice on the team.'
   },
   {
     employer: 'The Roundhouse',
@@ -99,7 +99,7 @@ export default function CV() {
                     return (
                       <>
                         <tr>
-                          <td style={{ fontWeight: 'bold' }}>{job.employer}</td>
+                          <td className='employer'>{job.employer}</td>
                           <td><em>{job.from} - {job.to}</em></td>
                         </tr>
                         <tr>

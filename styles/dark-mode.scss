@@ -52,7 +52,9 @@
     }
   }
 
-  .programming-skill {
+  .programming-skill, .employer {
     color: var(--terminal-text);
   }
+
+  .employer { font-weight: 600; }
 }
