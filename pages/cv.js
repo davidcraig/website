@@ -101,7 +101,7 @@ export default function CV() {
                       <>
                         <tr>
                           <td className='employer'>{job.employer}</td>
-                          <td className='employment-date has-text-right'><em>{dateRange}</em></td>
+                          <td className='employment-date has-text-right'>{dateRange}</td>
                         </tr>
                         <tr>
                           <td colSpan={2} style={{ paddingBottom: '12px' }}>{job.description}</td>
