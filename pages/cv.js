@@ -84,7 +84,7 @@ export default function CV() {
               <ul>
                 {
                   skills.map(skill => {
-                    return <li key={skill.name}><em>{skill.name}</em> - {skill.age} Years {skill.description ? ` - ${skill.description}` : ''}</li>
+                    return <li key={skill.name}><em className='programming-skill'>{skill.name}</em> - {skill.age} Years {skill.description ? ` - ${skill.description}` : ''}</li>
                   })
                 }
               </ul>

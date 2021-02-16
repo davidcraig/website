@@ -1,11 +1,5 @@
 @media (prefers-color-scheme: dark) {
   html {
-    --bg: #161616;
-    --bg-2: #131313;
-    --bg-3: #222;
-    --heading: #00aeff;
-    --tertiary: #da44ff;
-    --text: #ececec;
     background-color: var(--bg);
   }
 
@@ -48,11 +42,6 @@
   }
 
   code {
-    --terminal-text: #fcdc4d;
-    --terminal-color: #78ff3a;
-    --variable-color: #3ab0ff;
-    --options-color: #db8fff;
-    --chain-color: #ffa53e;
     &.terminal {
       color: var(--terminal-text);
 
@@ -61,5 +50,9 @@
       & .chain { color: var(--chain-color); }
       & .argument { color: var(--options-color); }
     }
+  }
+
+  .programming-skill {
+    color: var(--terminal-text);
   }
 }
