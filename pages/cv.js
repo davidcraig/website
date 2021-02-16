@@ -96,11 +96,12 @@ export default function CV() {
               <table>
                 <tbody>
                   {history.map(job => {
+                    const dateRange = `${job.from} - ${job.to}`
                     return (
                       <>
                         <tr>
                           <td className='employer'>{job.employer}</td>
-                          <td><em>{job.from} - {job.to}</em></td>
+                          <td className='employment-date has-text-right'><em>{dateRange}</em></td>
                         </tr>
                         <tr>
                           <td colSpan={2} style={{ paddingBottom: '12px' }}>{job.description}</td>
