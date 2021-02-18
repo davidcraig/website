@@ -1,33 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
-
-const siteTitle = 'David Craig - Developer'
-
-const navItems = [
-  { url: '/', name: 'About' },
-  { url: '/cv', name: 'CV' },
-  { url: '/blog/archives', name: 'Blog' }
-]
-
-function Navigation() {
-  return (
-    <aside class="menu">
-      <p class='menu-label brand'>
-        David Craig<br/>
-        Developer
-      </p>
-      <ul class="menu-list">
-        {
-          navItems.map(nav => {
-            return <li>
-              <Link key={nav.name} href={nav.url}>{nav.name}</Link>
-            </li>
-          })
-        }
-      </ul>
-    </aside>
-  )
-}
+import Navigation from './Navigation'
 
 export default function App (props) {
   return (
