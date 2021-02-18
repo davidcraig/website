@@ -2,10 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dcraig.dev</loc>
-    <lastmod>2021-02-15</lastmod>
+    <lastmod>2021-02-17</lastmod>
   </url>
   <url>
     <loc>https://dcraig.dev/cv</loc>
+    <lastmod>2021-02-15</lastmod>
+  </url>
+  <url>
+    <loc>https://dcraig.dev/blog/archives</loc>
+    <lastmod>2021-02-17</lastmod>
+  </url>
+  <url>
+    <loc>https://dcraig.dev/blog/archives/2011/windows-7-automatic-login</loc>
+    <lastmod>2021-02-15</lastmod>
+  </url>
+  <url>
+    <loc>https://dcraig.dev/blog/archives/2011/installing-ruby-on-rails-on-windows-xp</loc>
+    <lastmod>2021-02-15</lastmod>
+  </url>
+  <url>
+    <loc>https://dcraig.dev/blog/archives/2014/setting-up-bash-alias</loc>
+    <lastmod>2021-02-15</lastmod>
+  </url>
+  <url>
+    <loc>https://dcraig.dev/blog/archives/2020/watching-database-columns</loc>
     <lastmod>2021-02-15</lastmod>
   </url>
 </urlset>
