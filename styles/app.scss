@@ -75,3 +75,18 @@ main {
 
 @import './code.scss';
 @import './dark-mode.scss';
+
+@media (max-width: 620px) {
+  #site {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside, main {
+    width: 100%;
+  }
+
+  main {
+    padding: 0.8rem;
+  }
+}
