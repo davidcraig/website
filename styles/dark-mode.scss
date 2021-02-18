@@ -8,7 +8,7 @@
   .card-header-title, .content .h5, .content .h1 { color:var(--heading); }
   .content .h2 { color:var(--tertiary); }
 
-  .card, .media, code {
+  .card, .media {
     background-color: var(--bg-2);
     color: var(--text);
     border-radius: 8px;
@@ -39,17 +39,6 @@
 
   .content table td, .content table th {
     border-color: var(--bg-3);
-  }
-
-  code {
-    &.terminal {
-      color: var(--terminal-text);
-
-      & .command { color: var(--terminal-color); }
-      & .variable { color: var(--variable-color); }
-      & .chain { color: var(--chain-color); }
-      & .argument { color: var(--options-color); }
-    }
   }
 
   .programming-skill, .employer {

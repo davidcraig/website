@@ -69,8 +69,9 @@ main {
  }
 }
 
-code {
-  font-family: Hack, 'Source Code Pro', 'Ubuntu Mono', monospace;
+.content pre, pre {
+  background: transparent !important;
 }
 
+@import './code.scss';
 @import './dark-mode.scss';
