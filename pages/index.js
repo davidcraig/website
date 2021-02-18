@@ -55,7 +55,7 @@ function dcraigMedia() {
 function aboutMe() {
   return (
     <Card title='About Me'>
-      <p>My name is David, I am a computer enthusiast who enjoys learning about new technology.</p>
+      <p>My name is David, I am a computer enthusiast who enjoys learning about and playing with new technology.</p>
       <p>I have been a developer for {dev.years} years before that I did customer services and technical support.</p>
       <p>When I am not working I enjoy unwinding by playing computer games and spending time with my family.</p>
     </Card>
