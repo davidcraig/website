@@ -4,6 +4,60 @@ export const terminalArg = (arg) => {
   return <code className='terminal'><span className='argument'>{arg}</span></code>
 }
 
+const RenderGeneric = (children) => {
+  if (typeof children === 'string') {
+    return <span className='command'>{children}</span>
+  }
+
+  return children.map((child) => {
+    if (child.match('{') && child.match('}')) {
+      return <span className='variable'>{child}</span>
+    }
+    return child
+  })
+}
+
+const RenderSql = (children) => {
+  const keywords = [
+    'use', 'USE',
+    'delimiter', 'DELIMETER',
+    'create', 'CREATE',
+    'table', 'TABLE',
+    'after', 'AFTER',
+    'update', 'UPDATE',
+    'on', 'ON',
+    'join', 'JOIN',
+    'insert', 'INSERT',
+    'into', 'INTO',
+    'FOR', 'EACH', 'ROW',
+    'NOW()'
+  ]
+
+  if (typeof children === 'string') {
+    if (children.match(' ')) {
+      children = children.split(' ')
+    } else {
+      return <span className='command'>{children}</span>
+    }
+  }
+
+  // Because array may not have clean breaks lets re-break it
+  const merged = children.join(' ')
+  const separated = merged.split(' ')
+
+  return separated.map((child) => {
+    if (child.match('{') && child.match('}')) {
+      return <span className='variable'>{child}</span>
+    }
+    if (keywords.includes(child)) {
+      return <span className='command'>{child}</span>
+    }
+    return child
+  }).reduce((accu, elem) => {
+    return accu === null ? [elem] : [...accu, ' ', elem]
+  }, null)
+}
+
 const RenderTerminal = (children) => {
   const commands = [
     'mkdir', 'chown', 'chgrp', 'ls', 'dir', 'cd',
@@ -48,17 +102,16 @@ export const Code = (props) => {
           {RenderTerminal(props.children)}
         </code>
       )
+    case 'sql':
+      return (
+        <code className='sql'>
+          {RenderSql(props.children)}
+        </code>
+      )
     default:
       return (
-        <code>
-          {
-            props.children.map((child) => {
-              if (child.match('{') && child.match('}')) {
-                return <span className='variable'>{child}</span>
-              }
-              return child
-            })
-          }
+        <code className='generic'>
+          {RenderGeneric(props.children)}
         </code>
       )
   }
