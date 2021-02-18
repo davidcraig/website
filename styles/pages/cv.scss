@@ -1,0 +1,16 @@
+.employer { font-weight: 600; }
+
+.employment-date {
+  color: var(--theme-text-soft, pink);
+  font-size: 0.9em;
+}
+
+.programming-skill, .employer {
+  color: var(--theme-text-terminal-2);
+}
+
+#cv {
+  section {
+    margin-bottom: 20px;
+  }
+}

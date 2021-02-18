@@ -1,0 +1,49 @@
+:root {
+  --code-border-size: 1px;
+}
+
+code {
+  font-family: Hack, 'Source Code Pro', 'Ubuntu Mono', monospace;
+
+  background-color: var(--theme-bg);
+  border: var(--code-border-size) solid var(--theme-bg-2);
+  box-shadow: 4px 4px 4px var(--theme-bg);
+  color: var(--theme-text);
+  border-radius: 8px;
+}
+
+pre code {
+  border: none;
+  background-color: transparent;
+}
+
+.codeblock {
+  background-color: var(--theme-bg-2);
+  color: var(--text);
+  border-radius: 8px;
+  border: var(--code-border-size) solid var(--theme-bg);
+  margin-bottom: 1rem;
+
+  pre {
+    padding: .5rem;
+  }
+
+  code {
+    box-shadow: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  code {
+    &.terminal,
+    &.generic,
+    &.sql {
+      color: var(--theme-text-terminal);
+
+      & .command { color: var(--theme-text-terminal-2); }
+      & .variable { color: var(--theme-text-variable); }
+      & .chain { color: var(--theme-text-chain); }
+      & .argument { color: var(--theme-text-options); }
+    }
+  }
+}

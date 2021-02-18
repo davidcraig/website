@@ -9,15 +9,47 @@
   --heading: #00aeff;
   --tertiary: #da44ff;
   --text: #ececec;
-  --terminal-text: #fcdc4d;
-  --terminal-color: #78ff3a;
-  --variable-color: #3ab0ff;
-  --options-color: #db8fff;
-  --chain-color: #ffa53e;
+
+  --theme-bg: #ececec;
+  --theme-bg-2: #cacaca;
+  --theme-bg-3: #a8a8a8;
+  --theme-text: var(--bg-2);
+  --theme-heading: #005177;
+  --theme-tertiary: #5b0085;
+  --theme-text-soft: rgb(107, 107, 107);
+
+  --theme-text-terminal: #8900a5;
+  --theme-text-variable: #004e83;
+  --theme-text-options: #670097;
+  --theme-text-terminal: #aa8e13;
+  --theme-text-terminal-2: #288000;
+  --theme-text-chain: #8d4b00;
+}
+
+@import './dark-mode.scss';
+@import './pages/cv.scss';
+@import './components/card.scss';
+@import './components/media.scss';
+@import './components/table.scss';
+@import './components/code.scss';
+
+html {
+  background-color: var(--theme-bg);
+}
+
+*,
+.media-content strong {
+  color: var(--theme-text);
 }
 
 html, #site, #__next {
   overflow: hidden;
+}
+
+/* Fix bulma overflow */
+.columns {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #site {
@@ -57,19 +89,14 @@ main {
   }
 }
 
-
-/* Page Specific CSS */
-#cv {
-  section {
-    margin-bottom: 20px;
-  }
-}
-
-.content figure:not(:last-child) {
-  margin-bottom: 0;
-}
-
 .content {
+  .h5, .h1 { color: var(--theme-heading); }
+  .h2 { color: var(--theme-tertiary); }
+
+  figure:not(:last-child) {
+    margin-bottom: 0;
+  }
+
   .dcraig-intro-media {
     figure {
       margin-left: 0;
@@ -87,9 +114,6 @@ main {
   background: transparent !important;
 }
 
-@import './code.scss';
-@import './dark-mode.scss';
-
 @media (max-width: 620px) {
   #site {
     display: flex;
@@ -102,5 +126,22 @@ main {
 
   main {
     padding: 0.8rem;
+  }
+}
+
+.tag:not(body) {
+  background-color: var(--theme-bg);
+  border: 1px solid var(--theme-bg-2);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--theme-text-soft);
+}
+
+.menu-list a {
+  color: var(--theme-text);
+
+  &:hover {
+    background: transparent;
+    color: var(--theme-heading);
   }
 }

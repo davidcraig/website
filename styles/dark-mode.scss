@@ -1,53 +1,16 @@
 @media (prefers-color-scheme: dark) {
-  html {
-    background-color: var(--bg);
-  }
+  :root {
+    --theme-bg: var(--bg);
+    --theme-bg-2: var(--bg-2);
+    --theme-text: var(--text);
+    --theme-tertiary: var(--tertiary);
+    --theme-heading: var(--heading);
+    --theme-text-soft: #b8b8b8;
 
-  *, .media-content strong { color: var(--text); }
-
-  .card-header-title, .content .h5, .content .h1 { color:var(--heading); }
-  .content .h2 { color:var(--tertiary); }
-
-  .card, .media {
-    background-color: var(--bg-2);
-    color: var(--text);
-    border-radius: 8px;
-    border: 2px solid #121212;
-    box-shadow: 4px 4px 4px #181818;
-  }
-
-  .table {
-    background-color: transparent;
-    color: var(--text);
-  }
-
-  .tag:not(body) {
-    background-color: var(--bg);
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-    color: #acacac;
-  }
-
-  .menu-list a {
-    color: var(--text);
-
-    &:hover {
-      background: transparent;
-      color: var(--heading);
-    }
-  }
-
-  .content table td, .content table th {
-    border-color: var(--bg-3);
-  }
-
-  .programming-skill, .employer {
-    color: var(--terminal-text);
-  }
-
-  .employer { font-weight: 600; }
-  .employment-date {
-    color: #b8b8b8;
-    font-size: 0.9em;
+    --theme-text-terminal: #fcdc4d;
+    --theme-text-terminal-2: #78ff3a;;
+    --theme-text-variable: #3ab0ff;
+    --theme-text-options: #db8fff;
+    --theme-text-chain: #ffa53e;
   }
 }
