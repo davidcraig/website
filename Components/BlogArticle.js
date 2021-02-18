@@ -19,7 +19,7 @@ const BlogArticle = (props) => {
         <App>
           <article className='blog-article'>
             <h1 className='h1'>{props.title}</h1>
-            <small className='mb-4'>Published {props.date}</small>
+            <p className='mb-4'><small>Published {props.date}</small></p>
             {props.children}
           </article>
         </App>
