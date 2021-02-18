@@ -8,7 +8,6 @@ export default function CodeBlock(props) {
       <pre>
       {
         props.code.map(line => {
-          console.log(line)
           return (
             <>
               <Code type={props.type}>{line}</Code>
