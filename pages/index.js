@@ -21,29 +21,29 @@ function tag(text, type = null) {
 
 function dcraigMedia() {
   return (
-    <article class="media dcraig-intro-media">
-      <figure class="media-left">
-        <p class="image is-128x160" style={{ backgroundImage: 'url(/images/me.png)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom center' }}>
+    <article className="media dcraig-intro-media">
+      <figure className="media-left">
+        <p className="image is-128x160" style={{ backgroundImage: 'url(/images/me.png)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom center' }}>
         </p>
       </figure>
-      <div class="media-content">
-        <div class="content">
+      <div className="media-content">
+        <div className="content">
           <p>
             <strong>David Craig</strong>
             <br />
             {tag('Developer')} {tag('Father')} {tag('Husband')} {tag('Gamer')}
           </p>
         </div>
-        <nav class="level is-mobile">
-          <div class="level-left">
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-reply"></i></span>
+        <nav className="level is-mobile">
+          <div className="level-left">
+            <a className="level-item">
+              <span className="icon is-small"><i className="fas fa-reply"></i></span>
             </a>
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+            <a className="level-item">
+              <span className="icon is-small"><i className="fas fa-retweet"></i></span>
             </a>
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-heart"></i></span>
+            <a className="level-item">
+              <span className="icon is-small"><i className="fas fa-heart"></i></span>
             </a>
           </div>
         </nav>
