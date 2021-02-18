@@ -1,5 +1,5 @@
 import React from 'react'
-import Code from '../../../../Components/Theme/Code'
+import CodeBlock from '../../../../Components/Theme/CodeBlock'
 import BlogArticle from '../../../../Components/BlogArticle'
 
 const createTableSql = () => {
@@ -15,7 +15,7 @@ const createTableSql = () => {
     ');'
   ]
 
-  return <Code type='sql'>{SQL}</Code>
+  return <CodeBlock type='sql' code={SQL} />
 }
 
 const createTriggerSql = () => {
@@ -35,7 +35,7 @@ const createTriggerSql = () => {
   'DELIMITER ;'
   ]
 
-  return <Code type='sql'>{SQL}</Code>
+  return <CodeBlock type='sql' code={SQL} />
 }
 
 function WatchingDatabaseColumns() {
