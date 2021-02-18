@@ -11,16 +11,19 @@ import Head from 'next/head'
  */
 const BlogArticle = (props) => {
     return (
-      <article className='blog-article'>
+      <>
         <Head>
           <meta charSet='utf-8' />
           <title>David Craig - {props.title}</title>
         </Head>
         <App>
-          <h1 className='h1'>{props.title}</h1>
-          {props.children}
+          <article className='blog-article'>
+            <h1 className='h1'>{props.title}</h1>
+            <small className='mb-4'>Published {props.date}</small>
+            {props.children}
+          </article>
         </App>
-      </article>
+      </>
     )
 }
 
