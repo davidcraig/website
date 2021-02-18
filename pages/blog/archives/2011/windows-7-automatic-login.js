@@ -9,6 +9,8 @@ const Win7AutoLogin = () => {
       title='Windows 7 - Automatic Login'
       datetime='2011-02-10'
       date='10 Feb 2011'
+      description='A guide to automatically logging in on windows 7'
+      keywords={['windows', 'automatic', 'login']}
     >
       <p>This article guides you how to enable automatic login for Windows 7 if for whatever reason you have to click your account to login.</p>
       <p>Press windows &amp; R for run box</p>

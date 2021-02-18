@@ -49,6 +49,8 @@ function WatchingDatabaseColumns() {
       title={title}
       date={date}
       datetime='2020-01-31'
+      description='A guide on how to set up database watching in mysql using triggers'
+      keywords={['database', 'mysql', 'watcher', 'changes', 'trigger']}
     >
       <p>In order to determine what changes occur in a database for a particular column, it can be useful to set up a watcher.</p>
       <p>To do this we first need to create an audit table (name can be anything).</p>

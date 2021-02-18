@@ -96,6 +96,8 @@ export default function Home() {
     <>
       <Head>
         <title>David Craig - Developer</title>
+        <meta name='description' content='WebPage about David Craig a Web Developer from the UK.' />
+        <meta name='keywords' content='David Craig, Developer, UK, Portfolio, About, Profile' />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

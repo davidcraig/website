@@ -9,6 +9,8 @@ const IndexPage = () => {
       title='Setting up a bash alias'
       datetime='2014-07-09'
       date='9 July 2014'
+      description='A guide on setting up aliases in bash'
+      keywords={['bash', 'alias', 'tutorial', 'guide']}
     >
       <p>In my day-to-day work I am using Vagrant with VirtualBox which provides an easy to setup development environment pre-configured with ubuntu, php, mysql and nginx.</p>
       <p>One thing that helps save time is reducing the time spent writing terminal commands, this is where a bash alias comes in handy.</p>

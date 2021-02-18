@@ -27,6 +27,7 @@ const BlogArchives = () => {
     <>
       <Head>
         <meta charSet='utf-8' />
+        <meta name='description' content="David Craig's Blog Archives" />
         <title>David Craig - Developer</title>
       </Head>
       <App>

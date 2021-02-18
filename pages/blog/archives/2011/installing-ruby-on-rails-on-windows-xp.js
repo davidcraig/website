@@ -9,6 +9,8 @@ const IndexPage = () => {
       title='Installing Ruby on Rails on Windows XP'
       datetime='2011-02-06'
       date='6 Feb 2011'
+      description='A guide to installing Ruby on Rails on Windows XP'
+      keywords={['windows', 'ruby', 'rails', 'guide', 'tutorial']}
     >
       <h2 className='h2'>Installation</h2>
       <p>First of all, simply run the Ruby installer from the website, then download the ruby gems setup, extract all of the files, and run setup.rb - this installs gems.</p>
