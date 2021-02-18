@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import App from '../Components/App'
 import { Card } from '@davidcraig/react-bulma'
+import dev from '../data/dev'
 
-const experience = { dev: 5 }
+const experience = { dev: dev.years }
 experience.php = experience.dev + 2
 experience.ruby = experience.dev - 3
 experience.css = experience.dev + 5

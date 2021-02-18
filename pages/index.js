@@ -4,7 +4,7 @@ import ExternalLink from '../Components/ExternalLink'
 import { Columns, Column, Card } from '@davidcraig/react-bulma'
 import { WebSite } from '@davidcraig/react-schema'
 import { PersonJson } from '@davidcraig/react-schema/dist/Person/Person'
-import { urlObjectKeys } from 'next/dist/next-server/lib/utils'
+import dev from '../data/dev'
 
 function tag(text, type = null) {
   const classes = ['tag']
@@ -52,6 +52,40 @@ function dcraigMedia() {
   )
 }
 
+function aboutMe() {
+  return (
+    <Card title='About Me'>
+      <p>My name is David, I am a computer enthusiast who enjoys learning about new technology.</p>
+      <p>I have been a developer for {dev.years} years before that I did customer services and technical support.</p>
+      <p>When I am not working I enjoy unwinding by playing computer games and spending time with my family.</p>
+    </Card>
+  )
+}
+
+/* Links to my development profiles */
+function devProfiles() {
+  return (
+    <Card title='Development Profiles'>
+      <table className='table is-narrow'>
+        <tbody>
+          <tr>
+            <td>Github</td>
+            <td>
+              {ExternalLink('https://github.com/davidcraig', 'davidcraig')}
+            </td>
+          </tr>
+          <tr>
+            <td>NPM</td>
+            <td>
+              {ExternalLink('https://www.npmjs.com/~davidcraig', '@davidcraig')}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </Card>
+  )
+}
+
 export default function Home() {
   const davidPerson = PersonJson({
     name: 'David Craig',
@@ -73,26 +107,10 @@ export default function Home() {
         </Columns>
         <Columns>
           <Column>
-            <Card title='Development Profiles'>
-              <table className='table is-narrow'>
-                <tbody>
-                  <tr>
-                    <td>Github</td>
-                    <td>
-                      {ExternalLink('https://github.com/davidcraig', 'davidcraig')}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>NPM</td>
-                    <td>
-                      {ExternalLink('https://www.npmjs.com/~davidcraig', '@davidcraig')}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </Card>
+            {aboutMe()}
           </Column>
           <Column>
+            {devProfiles()}
           </Column>
         </Columns>
       </App>
