@@ -3,9 +3,6 @@ import App from '../../Components/App'
 import Head from 'next/head'
 
 const archives = {
-  2014: [
-    { slug: 'setting-up-bash-alias', name: 'Setting up a bash alias' }
-  ],
   2011: [
     {
       slug: 'installing-ruby-on-rails-on-windows-xp',
@@ -15,7 +12,13 @@ const archives = {
       slug: 'windows-7-automatic-login',
       name: 'Windows 7 - Automatic Login'
     }
-  ]
+  ],
+  2014: [
+    { slug: 'setting-up-bash-alias', name: 'Setting up a bash alias' }
+  ],
+  2020: [
+    { slug: 'watching-database-columns', name: 'Watching a database column for changes' }
+  ],
 }
 
 // markup
@@ -28,8 +31,6 @@ const BlogArchives = () => {
       </Head>
       <App>
         <h1 className='h1'>Blog Archives</h1>
-
-        
         {
           Object.keys(archives).map(year => {
             const posts = archives[year]
