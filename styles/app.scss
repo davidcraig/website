@@ -124,6 +124,15 @@ main {
     width: 100%;
   }
 
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+
+    .is-active a {
+      color: var(--theme-heading);
+    }
+  }
+
   main {
     padding: 0.8rem;
   }

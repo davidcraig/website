@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const navItems = [
   { url: '/', name: 'About' },
@@ -8,6 +9,8 @@ const navItems = [
 ]
 
 export default function Navigation() {
+  const router = useRouter()
+  const currentRoute = router.pathname
   return (
     <aside class="menu">
       <p class='menu-label brand'>
@@ -17,7 +20,7 @@ export default function Navigation() {
       <ul class="menu-list">
         {
           navItems.map(nav => {
-            return <li>
+            return <li className={currentRoute == nav.url ? 'is-active' : ''}>
               <Link key={nav.name} href={nav.url}>{nav.name}</Link>
             </li>
           })
