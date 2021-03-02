@@ -1,4 +1,5 @@
 import '../styles/app.scss'
+import Head from 'next/head'
 
 const ROLLBAR_CFG = {
   accessToken: "4d9599ff54fc4395803340c79e5c299f",
@@ -28,12 +29,15 @@ function rollbar() {
   return scr
 }
 
-<script>
-
-</script>
-
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        {rollbar()}
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
