@@ -10,8 +10,6 @@ const ROLLBAR_CFG = {
   }
 }
 
-console.log(process.env)
-
 const ROLLBAR_CONFIG = `var _rollbarConfig = ${ROLLBAR_CFG};
 `
 
