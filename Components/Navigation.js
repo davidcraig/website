@@ -12,12 +12,12 @@ export default function Navigation() {
   const router = useRouter()
   const currentRoute = router.pathname
   return (
-    <aside class="menu">
-      <p class='menu-label brand'>
+    <aside className="menu">
+      <p className='menu-label brand'>
         David Craig<br/>
         Developer
       </p>
-      <ul class="menu-list">
+      <ul className="menu-list">
         {
           navItems.map(nav => {
             return <li className={currentRoute == nav.url ? 'is-active' : ''}>
