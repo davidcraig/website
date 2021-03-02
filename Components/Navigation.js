@@ -20,8 +20,8 @@ export default function Navigation() {
       <ul className="menu-list">
         {
           navItems.map(nav => {
-            return <li className={currentRoute == nav.url ? 'is-active' : ''}>
-              <Link key={nav.name} href={nav.url}>{nav.name}</Link>
+            return <li key={nav.name} className={currentRoute == nav.url ? 'is-active' : ''}>
+              <Link href={nav.url}>{nav.name}</Link>
             </li>
           })
         }
