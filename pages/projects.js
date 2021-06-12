@@ -4,12 +4,16 @@ import App from '../Components/App'
 import { Card } from '@davidcraig/react-bulma'
 import JSXJoin from '../Functions/JSXJoin'
 
+// Stack elements
 const NextJS = { name: 'NextJS', url: 'https://nextjs.org/' }
 const Netlify = { name: 'Netlify', url: 'https://www.netlify.com/' }
 const Bulma = { name: 'Bulma', url: 'https://bulma.io/' }
 const Highcharts = { name: 'Highcharts', url: 'https://www.highcharts.com/' }
+const GoogleSheets = 'Google Sheet integration'
+const Workers = 'Web Workers'
 
 const myProjects = [
+  // SmartWealth
   {
     name: 'SmartWealth',
     date: 'June 2021',
@@ -20,7 +24,7 @@ const myProjects = [
       </p>
     ),
     stack: [
-      NextJS, Bulma, Netlify, Highcharts
+      NextJS, Bulma, Netlify, Highcharts, Workers, GoogleSheets
     ],
     images: [
       '/images/projects/smartwealth/SmartWealth-Forecast.png',
