@@ -39,13 +39,13 @@ const BlogArchives = () => {
               <React.Fragment key={year}>
                 <h2 className='h2'>{year}</h2>
                 <ul>
-                {posts.map(post => {
-                  return (
-                    <li key={post.slug}>
-                      <a href={`/blog/archives/${year}/${post.slug}`}>{post.name}</a>
-                    </li>
-                  )
-                })}
+                  {posts.map(post => {
+                    return (
+                      <li key={post.slug}>
+                        <a href={`/blog/archives/${year}/${post.slug}`}>{post.name}</a>
+                      </li>
+                    )
+                  })}
                 </ul>
               </React.Fragment>
             )

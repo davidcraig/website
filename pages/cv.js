@@ -1,3 +1,4 @@
+import React, { Fragment } from 'react'
 import Head from 'next/head'
 import App from '../Components/App'
 import { Card } from '@davidcraig/react-bulma'
@@ -64,13 +65,13 @@ const history = [
   }
 ]
 
-export default function CV() {
+export default function CV () {
   return (
     <>
       <Head>
         <title>David Craig | CV</title>
         <meta name='description' content='Web C.V. for David Craig, Web Developer from England.' />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <div id='cv'>
@@ -100,7 +101,7 @@ export default function CV() {
                   {history.map(job => {
                     const dateRange = `${job.from} - ${job.to}`
                     return (
-                      <>
+                      <Fragment key={dateRange}>
                         <tr>
                           <td className='employer'>{job.employer}</td>
                           <td className='employment-date has-text-right'>{dateRange}</td>
@@ -108,7 +109,7 @@ export default function CV() {
                         <tr>
                           <td colSpan={2} style={{ paddingBottom: '12px' }}>{job.description}</td>
                         </tr>
-                      </>
+                      </Fragment>
                     )
                   })}
                 </tbody>

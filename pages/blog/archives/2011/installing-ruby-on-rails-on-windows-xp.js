@@ -3,7 +3,7 @@ import BlogArticle from '../../../../Components/BlogArticle'
 import Code, { terminalArg } from '../../../../Components/Theme/Code'
 
 // markup
-const IndexPage = () => {
+const WindowsXpRailsArticle = () => {
   return (
     <BlogArticle
       title='Installing Ruby on Rails on Windows XP'
@@ -41,7 +41,7 @@ const IndexPage = () => {
       <p>of course being on XP I get a firewall dialogue, so I choose to allow it.</p>
       <p>the last line when you run this command gives us the details of the server</p>
       <p>**Mongrel 1.1.5 available at 0.0.0.0:3000</p>
-      <p>so to access our server we simply type in <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">http://localhost:3000</a></p>
+      <p>so to access our server we simply type in <a href='http://localhost:3000' target='_blank' rel='noopener noreferrer'>http://localhost:3000</a></p>
       <p>and you should see your ruby on rails enviroment all ready to use! (you need to keep that console open unless you install the mongrel service)</p>
 
       <h2 className='h2'>To run mongrel as a service</h2>
@@ -60,4 +60,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default WindowsXpRailsArticle

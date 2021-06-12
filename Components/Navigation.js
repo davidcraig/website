@@ -8,21 +8,23 @@ const navItems = [
   { url: '/blog/archives', name: 'Blog' }
 ]
 
-export default function Navigation() {
+export default function Navigation () {
   const router = useRouter()
   const currentRoute = router.pathname
   return (
-    <aside className="menu">
+    <aside className='menu'>
       <p className='menu-label brand'>
-        David Craig<br/>
+        David Craig<br />
         Developer
       </p>
-      <ul className="menu-list">
+      <ul className='menu-list'>
         {
           navItems.map(nav => {
-            return <li key={nav.name} className={currentRoute == nav.url ? 'is-active' : ''}>
-              <Link href={nav.url}>{nav.name}</Link>
-            </li>
+            return (
+              <li key={nav.name} className={currentRoute === nav.url ? 'is-active' : ''}>
+                <Link href={nav.url}>{nav.name}</Link>
+              </li>
+            )
           })
         }
       </ul>

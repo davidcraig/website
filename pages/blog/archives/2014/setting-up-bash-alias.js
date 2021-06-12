@@ -3,7 +3,7 @@ import BlogArticle from '../../../../Components/BlogArticle'
 import Code from '../../../../Components/Theme/Code'
 
 // markup
-const IndexPage = () => {
+const SettingUpBashAliasArticle = () => {
   return (
     <BlogArticle
       title='Setting up a bash alias'
@@ -35,4 +35,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default SettingUpBashAliasArticle

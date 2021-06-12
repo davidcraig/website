@@ -20,19 +20,19 @@ const createTableSql = () => {
 
 const createTriggerSql = () => {
   const SQL = [
-  'DELIMITER $$',
-  'USE \`database\`$$',
-  'CREATE TRIGGER \`table_AFTER_UPDATE_column\` AFTER UPDATE ON \`table\` FOR EACH ROW',
-  'BEGIN',
-  '    INSERT INTO \`change_audit\` (\`table\`, \`column\`, \`old\`, \`new\`, \`time\`) VALUES (',
-  '        \'table_name\',',
-  '        \'column_name\',',
-  '        OLD.column_name,',
-  '        NEW.column_name,',
-  '        NOW()',
-  '    );',
-  'END$$',
-  'DELIMITER ;'
+    'DELIMITER $$',
+    'USE \`database\`$$',
+    'CREATE TRIGGER \`table_AFTER_UPDATE_column\` AFTER UPDATE ON \`table\` FOR EACH ROW',
+    'BEGIN',
+    '    INSERT INTO \`change_audit\` (\`table\`, \`column\`, \`old\`, \`new\`, \`time\`) VALUES (',
+    '        \'table_name\',',
+    '        \'column_name\',',
+    '        OLD.column_name,',
+    '        NEW.column_name,',
+    '        NOW()',
+    '    );',
+    'END$$',
+    'DELIMITER ;'
   ]
 
   return <CodeBlock type='sql' code={SQL} />

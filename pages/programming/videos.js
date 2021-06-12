@@ -1,7 +1,6 @@
 import React from 'react'
 import App from '../../Components/App'
-import { Card } from "@davidcraig/react-bulma"
-import { ItemGrid } from '@davidcraig/react-bulma';
+import { Card, ItemGrid } from '@davidcraig/react-bulma'
 
 const videos = [
   {
@@ -17,10 +16,11 @@ function renderVideoCard(vid) {
   switch (vid.source) {
     case 'YouTube':
     default:
-      return <Card key={vid.yt} ytVideo={vid.yt} title={vid.title}>
-        <p><small>{vid.author} - {vid.date}</small></p>
-      </Card>
-      break;
+      return (
+        <Card key={vid.yt} ytVideo={vid.yt} title={vid.title}>
+          <p><small>{vid.author} - {vid.date}</small></p>
+        </Card>
+      )
   }
 }
 
@@ -29,7 +29,7 @@ export default function ProgrammingVideos() {
     <App>
       <h1 className='h1'>Programming Videos</h1>
       <ItemGrid columns={5}>
-        { videos.map(v => renderVideoCard(v)) }
+        {videos.map(v => renderVideoCard(v))}
       </ItemGrid>
     </App>
   )
