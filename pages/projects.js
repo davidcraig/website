@@ -41,7 +41,8 @@ function ImageViewer ({ image, setViewingImage }) {
               fontWeight: 'bold',
               padding: '1em',
               float: 'right',
-              marginBottom: '10px'
+              marginBottom: '10px',
+              border: '1px solid var(--bg-2)'
             }
           }
         >
