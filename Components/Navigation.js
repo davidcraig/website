@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 const navItems = [
   { url: '/', name: 'About' },
   { url: '/cv', name: 'CV' },
+  { url: '/projects', name: 'Projects' },
   { url: '/blog/archives', name: 'Blog' }
 ]
 
