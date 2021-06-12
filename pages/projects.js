@@ -104,7 +104,7 @@ function Projects () {
         }
       })
 
-      return <p>{JSXJoin(stack)}</p>
+      return <p>Stack: {JSXJoin(stack)}</p>
     }
 
     return ''
