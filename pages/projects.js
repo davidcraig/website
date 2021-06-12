@@ -6,11 +6,15 @@ import { Card } from '@davidcraig/react-bulma'
 const myProjects = [
   {
     name: 'SmartWealth',
+    date: 'June 2021',
     description: (
       <p>
         <a href='https://smartwealth.netlify.app' target='_blank' rel='noopener noreferrer'>SmartWealth</a> is an in-browser web app to track and forecast investing.
       </p>
     ),
+    tools: [
+      { name: 'NextJS' }, { name: 'Netlify' }
+    ],
     images: [
       '/images/projects/smartwealth/SmartWealth-Forecast.png',
       '/images/projects/smartwealth/SmartWealth-Goals.png',
@@ -96,8 +100,21 @@ function Projects () {
             <h1 className='h1'>Projects</h1>
             {
               myProjects.map(project => (
-                <Card key={project.name} title={project.name}>
+                <Card key={project.name} title={project.date ? `${project.name} - ${project.date}` : `${project.name}`}>
                   {project.description}
+                  <ul>
+                    {
+                      project.tools && project.tools.length > 0 && (
+                        project.tools.map(tool => {
+                          if (typeof tool === 'string') {
+                            return <li>{tool}</li>
+                          } else {
+                            return <li>{tool.name}</li>
+                          }
+                        })
+                      )
+                    }
+                  </ul>
                   <ImageGroup images={project.images} setViewingImage={setViewingImage} />
                 </Card>
               ))
