@@ -3,6 +3,11 @@ import Head from 'next/head'
 import App from '../Components/App'
 import { Card } from '@davidcraig/react-bulma'
 
+const NextJS = { name: 'NextJS', url: 'https://nextjs.org/' }
+const Netlify = { name: 'Netlify', url: 'https://www.netlify.com/' }
+const Bulma = { name: 'Bulma', url: 'https://bulma.io/' }
+const Highcharts = { name: 'Highcharts', url: 'https://www.highcharts.com/' }
+
 const myProjects = [
   {
     name: 'SmartWealth',
@@ -13,7 +18,7 @@ const myProjects = [
       </p>
     ),
     tools: [
-      { name: 'NextJS' }, { name: 'Netlify' }
+      NextJS, Bulma, Netlify, Highcharts
     ],
     images: [
       '/images/projects/smartwealth/SmartWealth-Forecast.png',
@@ -110,6 +115,9 @@ function Projects () {
                           if (typeof tool === 'string') {
                             return <li>{tool}</li>
                           } else {
+                            if (tool.url) {
+                              return <li><a target='_blank' rel='noopener noreferrer' href={tool.url}>{tool.name}</a></li>
+                            }
                             return <li>{tool.name}</li>
                           }
                         })
