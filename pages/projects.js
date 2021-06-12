@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import App from '../Components/App'
 import { Card } from '@davidcraig/react-bulma'
+import JSXJoin from '../Functions/JSXJoin'
 
 const NextJS = { name: 'NextJS', url: 'https://nextjs.org/' }
 const Netlify = { name: 'Netlify', url: 'https://www.netlify.com/' }
@@ -17,7 +18,7 @@ const myProjects = [
         <a href='https://smartwealth.netlify.app' target='_blank' rel='noopener noreferrer'>SmartWealth</a> is an in-browser web app to track and forecast investing.
       </p>
     ),
-    tools: [
+    stack: [
       NextJS, Bulma, Netlify, Highcharts
     ],
     images: [
@@ -85,6 +86,25 @@ function ImageGroup ({ images, setViewingImage }) {
 function Projects () {
   const [viewingImage, setViewingImage] = useState(null)
 
+  const renderStack = (project) => {
+    if (project.stack && project.stack.length > 0) {
+      const stack = project.stack.map(tool => {
+        if (typeof tool === 'string') {
+          return tool
+        } else {
+          if (tool.url) {
+            return <a target='_blank' rel='noopener noreferrer' href={tool.url}>{tool.name}</a>
+          }
+          return tool.name
+        }
+      })
+
+      return <p>{JSXJoin(stack)}</p>
+    }
+
+    return ''
+  }
+
   return (
     <>
       <Head>
@@ -108,22 +128,7 @@ function Projects () {
               myProjects.map(project => (
                 <Card key={project.name} title={project.date ? `${project.name} - ${project.date}` : `${project.name}`}>
                   {project.description}
-                  <ul>
-                    {
-                      project.tools && project.tools.length > 0 && (
-                        project.tools.map(tool => {
-                          if (typeof tool === 'string') {
-                            return <li>{tool}</li>
-                          } else {
-                            if (tool.url) {
-                              return <li><a target='_blank' rel='noopener noreferrer' href={tool.url}>{tool.name}</a></li>
-                            }
-                            return <li>{tool.name}</li>
-                          }
-                        })
-                      )
-                    }
-                  </ul>
+                  {renderStack(project)}
                   <ImageGroup images={project.images} setViewingImage={setViewingImage} />
                 </Card>
               ))
