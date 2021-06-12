@@ -28,7 +28,7 @@ const BlogArchives = () => {
       <Head>
         <meta charSet='utf-8' />
         <meta name='description' content="David Craig's Blog Archives" />
-        <title>David Craig - Developer</title>
+        <title>David Craig - Blog</title>
       </Head>
       <App>
         <h1 className='h1'>Blog Archives</h1>

@@ -78,7 +78,7 @@ function Projects () {
   return (
     <>
       <Head>
-        <title>David Craig | Projects</title>
+        <title>David Craig - Projects</title>
         <meta name='description' content='Web C.V. for David Craig, Web Developer from England.' />
         <link rel='icon' href='/favicon.ico' />
       </Head>

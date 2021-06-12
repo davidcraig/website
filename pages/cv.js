@@ -69,7 +69,7 @@ export default function CV () {
   return (
     <>
       <Head>
-        <title>David Craig | CV</title>
+        <title>David Craig - CV</title>
         <meta name='description' content='Web C.V. for David Craig, Web Developer from England.' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
