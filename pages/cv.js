@@ -76,7 +76,9 @@ export default function CV () {
 
       <div id='cv'>
         <App>
-          <Card title='David Craig - Curriculum Vitae'>
+          <h1 className='h1'>Curriculum Vitae</h1>
+
+          <Card>
             <section>
               <p>I have worked as a web developer for over {experience.dev} years and have gained experience that takes some senior developers years to master.</p>
               <p>I am able to create highly focused well unit tested code that conforms to coding standards and follow <span className='buzzword programming'>SOLID</span> principals.</p>
