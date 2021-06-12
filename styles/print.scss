@@ -1,0 +1,9 @@
+@media print {
+  #site {
+    display: none !important;
+  }
+
+  body:before {
+    content: 'Please do not attempt to print this site. If you would like a copy of my C.V. please get in touch on LinkedIn (davidcraig86).'
+  }
+}
