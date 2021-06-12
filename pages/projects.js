@@ -16,6 +16,7 @@ const myProjects = [
     description: (
       <p>
         <a href='https://smartwealth.netlify.app' target='_blank' rel='noopener noreferrer'>SmartWealth</a> is an in-browser web app to track and forecast investing.
+        Source can be viewed at <a href='https://github.com/davidcraig/smartwealth' target='_blank' rel='noreferrer noopener'>GitHub</a>
       </p>
     ),
     stack: [
